@@ -1,1 +1,10 @@
 <h1>My Robots</h1>
+
+<% @robots.map do |robot| %>
+  <h3><a href='/robots/<%= robot.name %>'><%= robot.name %></a></h3>
+  <p>
+    <%= robot.city %>&#44&#32<%= robot.state %>
+  </p> 
+  <h5><%= robot.department %></h5>
+<% end %>
+  
